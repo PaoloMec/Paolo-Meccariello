@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+body{
+  background-color: #070707;
+  color: aliceblue;
+  margin: 0;
+}
+
+@font-face{
+  font-family: 'NeutralFace';
+  src: url('./fonts/NeutralFace.otf') format('opentype');
+}
+
+@font-face{
+  font-family: 'NeutralFace-Bold';
+  src: url('./fonts/NeutralFace-Bold.otf') format('opentype');
+}
+
+@font-face{
+  font-family: 'Lastik';
+  src: url('./fonts/Lastik-Regular.otf') format('opentype');
+}
+
+.navBar{
+  font-family: 'NeutralFace';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #fff;
+}
+
+.heroSection{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 18px;
+  > * {
+    font-size: 150px;
+    color: #EB4C37;
+  }
+  .developer{
+    font-family: 'NeutralFace-Bold';
+  }
+  .front{
+    font-family: 'Lastik';
+  }
+}
