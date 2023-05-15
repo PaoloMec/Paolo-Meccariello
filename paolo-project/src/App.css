@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
+}
+*::selection {
+  background-color: #eb4c376e;
+  color: #eb4c37;
 }
 
 a {
@@ -11,6 +17,12 @@ body{
   background-color: #070707;
   color: aliceblue;
   margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+#root{
+  width: 100vw;
+  overflow: hidden;
 }
 
 @font-face{
@@ -33,32 +45,109 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 63px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
   border-bottom: 1px solid #fff;
+  z-index: 100;
+  mix-blend-mode: difference;
+  @media (max-width: 768px){
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}
+
+.wrapper{
+  position: relative;
+  padding: 0 30px;
+  @media screen and (max-width: 768px){
+    padding: 0 15px;
+  }
+  > div{
+    margin-bottom: 200px;
+    @media screen and (max-width: 768px){
+      margin-bottom: 100px;
+    }
+  }
 }
 
 .heroSection{
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
-  padding: 18px;
+  padding: 18px 0;
+  overflow: visible;
   > * {
-    font-size: 150px;
+    font-size: clamp(3rem, 9vw, 17rem);
     color: #EB4C37;
   }
   .developer{
     font-family: 'NeutralFace-Bold';
+    line-height: fit-content;
+
   }
   .front{
     font-family: 'Lastik';
+    line-height: fit-content;
+  }
+  .heroSection__image{
+    height: fit-content;
+    .heroImg{
+      position: absolute;
+      top: -45px;
+      right: -145px;
+      width: 50vw;
+      height: fit-content;
+      @media (max-width: 768px){
+        width: 500px;
+      }
+    }
+  }
+}
+
+
+.halfParagraph{
+  width: 50vw;
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
+    
+  margin-left: auto;
+  .halfParagraphTitle{
+    font-size: 40px;
+    background: linear-gradient(180.26deg, #EB4C37 18.91%, #F3F3F3 90.81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 500;
+    @media screen and (max-width: 768px){
+      font-size: 24px;
+    }
+  }
+  .halfParagraphText{
+    font-size: 20px;
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+    }
+  }
+}
+
+.SvgUninion{
+  margin: 0 auto;
+  width: fit-content;
+  
+}
+.SvgUninion img{
+  width: 100%;
+  @media screen and (max-width: 768px){
+        transform: scale(2.5);
   }
 }
